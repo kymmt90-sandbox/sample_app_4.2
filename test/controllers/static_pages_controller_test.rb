@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class StaticPagesControllerTest < ActionController::TestCase
+  def setup
+    @base_title = 'Ruby on Rails Tutorial Sample App'
+  end
+
   test 'should get home' do
     get :home
     assert_response :success
@@ -8,7 +12,7 @@ class StaticPagesControllerTest < ActionController::TestCase
 
   test 'should get correct home title' do
     get :home
-    assert_select 'title', 'Home | Ruby on Rails Tutorial Sample App'
+    assert_select 'title', "Home | #{@base_title}"
   end
 
   test 'should get help' do
@@ -18,7 +22,7 @@ class StaticPagesControllerTest < ActionController::TestCase
 
   test 'should get correct help title' do
     get :help
-    assert_select 'title', 'Help | Ruby on Rails Tutorial Sample App'
+    assert_select 'title', "Help | #{@base_title}"
   end
 
   test 'should get about' do
@@ -28,6 +32,6 @@ class StaticPagesControllerTest < ActionController::TestCase
 
   test 'should get correct about title' do
     get :about
-    assert_select 'title', 'About | Ruby on Rails Tutorial Sample App'
+    assert_select 'title', "About | #{@base_title}"
   end
 end
