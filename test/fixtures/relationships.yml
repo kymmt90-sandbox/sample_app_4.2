@@ -1,0 +1,15 @@
+one:
+  follower: foobar
+  followed: lana
+
+two:
+  follower: foobar
+  followed: mallory
+
+three:
+  follower: lana
+  followed: fooobar
+
+four:
+  follower: hogefuga
+  followed: foobar
