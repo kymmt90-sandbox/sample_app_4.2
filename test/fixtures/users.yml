@@ -13,6 +13,12 @@ hogefuga:
   activated: true
   activated_at: <%= Time.zone.now %>
 
+fizzbuzz:
+  name: Fizz Buzz
+  email: fizzbuzz@example.com
+  password_digest: <%= User.digest('password') %>
+  activated: false
+
 lana:
   name: Lana Kane
   email: hands@example.gov
